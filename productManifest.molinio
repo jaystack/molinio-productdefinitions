@@ -1,0 +1,342 @@
+{
+  "name": "flowershop",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "workspaceImage": "molinio/workspace:latest",
+  "workspaceNetwork": "flowershop",
+  "refreshTime": 60000,
+  "onlineWorkspace": {
+    "hostAddress": "10.8.0.1",
+    "hostPort": "2375"
+  },
+  "environments": [],
+  "share": {
+    "mountDirectory": "c:",
+    "password": "xxxx",
+    "username": "xxxx"
+  },
+  "containerName": "molinio_workspace",
+  "machineName": "molinio",
+  "environmentsAccessibility": {
+    "local": {
+      "local": "localhost",
+      "workspace": "localhost",
+      "native": "localhost",
+      "online": "10.8.0.1"
+    },
+    "workspace": {
+      "local": "localhost",
+      "workspace": "localhost",
+      "native": "localhost",
+      "online": "10.8.0.1"
+    },
+    "native": {
+      "local": "localhost",
+      "workspace": "localhost",
+      "native": "localhost",
+      "online": "10.8.0.1"
+    },
+    "online": {
+      "local": "10.8.0.6",
+      "workspace": "10.8.0.6",
+      "native": "10.8.0.6",
+      "online": "10.8.0.1"
+    }
+  },
+  "projects": [
+    {
+      "name": "app-flowershop",
+      "imagename": "molinio/workspace",
+      "path": "app-flowershop",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/app-flowershop",
+          "repository": "https://github.com/jaystack/app-flowershop.git"
+        }
+      },
+      "endpoints": [
+        {
+          "aliases": [
+            "localhost:9000"
+          ],
+          "environments": {
+            "live": "sdfg"
+          },
+          "port": "9000"
+        }
+      ],
+      "dependencies": [
+        "app-flowershop-items",
+        "app-flowershop-cart",
+        "app-flowershop-registration",
+        "service-flowershop-logger",
+        "service-flowershop-notifications"
+      ],
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/app-flowershop"
+        }
+      ],
+      "start": {
+        "url": "http://localhost:9000/"
+      },
+      "commandMode": "local",
+      "state": {
+        "targetEnvironment": {
+          "env": null,
+          "errored": null,
+          "status": null,
+          "updated": 1486465470293
+        }
+      }
+    },
+    {
+      "name": "app-flowershop-cart",
+      "imagename": "molinio/workspace",
+      "path": "app-flowershop-cart",
+      "dependencies": [
+        "service-flowershop-data"
+      ],
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/app-flowershop-cart",
+          "repository": "https://github.com/jaystack/app-flowershop-cart.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/app-flowershop-cart"
+        }
+      ],
+      "commandMode": "local",
+      "endpoints": [
+        {
+          "aliases": [
+            "localhost:3000"
+          ],
+          "environments": {},
+          "port": "3000"
+        }
+      ]
+    },
+    {
+      "name": "app-flowershop-items",
+      "imagename": "molinio/workspace",
+      "path": "app-flowershop-items",
+      "dependencies": [
+        "service-flowershop-data"
+      ],
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/app-flowershop-items",
+          "repository": "https://github.com/jaystack/app-flowershop-items.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/app-flowershop-items"
+        }
+      ],
+      "commandMode": "local",
+      "endpoints": [
+        {
+          "aliases": [
+            "localhost:3001"
+          ],
+          "environments": {},
+          "port": "3001"
+        }
+      ]
+    },
+    {
+      "name": "service-flowershop-data",
+      "imagename": "molinio/workspace",
+      "path": "service-flowershop-data",
+      "dependencies": [
+        "infra-flowershop-rabbitmq",
+        "infra-flowershop-mongodb"
+      ],
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/service-flowershop-data",
+          "repository": "https://github.com/jaystack/service-flowershop-data.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/service-flowershop-data"
+        }
+      ],
+      "commandMode": "local",
+      "endpoints": [
+        {
+          "aliases": [
+            "localhost:3003"
+          ],
+          "environments": {},
+          "port": "3003"
+        }
+      ]
+    },
+    {
+      "name": "infra-flowershop-mongodb",
+      "imagename": "molinio/workspace",
+      "definition": {
+        "type": "mongodb",
+        "composeFile": "docker-compose.yml",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/infra-flowershop-mongodb.git",
+          "repository": "https://github.com/jaystack/infra-flowershop-mongodb.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/infra-flowershop-mongodb.git"
+        }
+      ],
+      "commandMode": "skip",
+      "dependencies": [],
+      "endpoints": [
+        {
+          "aliases": [
+            "localhost:27017"
+          ],
+          "environments": {},
+          "port": "27017"
+        }
+      ]
+    },
+    {
+      "commandMode": "skip",
+      "imagename": "molinio/workspace",
+      "definition": {
+        "source": {
+          "repository": "https://github.com/jaystack/infra-flowershop-rabbitmq.git",
+          "type": "git",
+          "url": "https://github.com/jaystack/infra-flowershop-rabbitmq"
+        },
+        "type": "docker"
+      },
+      "dependencies": [],
+      "name": "infra-flowershop-rabbitmq",
+      "endpoints": [
+        {
+          "aliases": [
+            "localhost:5672"
+          ],
+          "environments": {},
+          "port": "5672"
+        },
+        {
+          "aliases": [
+            "localhost:15672"
+          ],
+          "environments": {},
+          "port": "15672"
+        }
+      ],
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/infra-flowershop-rabbitmq"
+        }
+      ]
+    },
+    {
+      "commandMode": "local",
+      "imagename": "molinio/workspace",
+      "definition": {
+        "source": {
+          "repository": "https://github.com/jaystack/service-flowershop-notifications.git",
+          "type": "git",
+          "url": "https://github.com/jaystack/service-flowershop-notifications"
+        },
+        "type": "nodejs"
+      },
+      "dependencies": [
+        "infra-flowershop-rabbitmq",
+        "infra-flowershop-mongodb"
+      ],
+      "name": "service-flowershop-notifications",
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/service-flowershop-notifications"
+        }
+      ]
+    },
+    {
+      "commandMode": "local",
+      "imagename": "molinio/workspace",
+      "definition": {
+        "source": {
+          "repository": "https://github.com/jaystack/service-flowershop-logger.git",
+          "type": "git",
+          "url": "https://github.com/jaystack/service-flowershop-logger"
+        },
+        "type": "nodejs"
+      },
+      "dependencies": [
+        "infra-flowershop-rabbitmq"
+      ],
+      "name": "service-flowershop-logger",
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/service-flowershop-logger"
+        }
+      ]
+    },
+    {
+      "commandMode": "local",
+      "imagename": "molinio/workspace",
+      "definition": {
+        "source": {
+          "repository": "https://github.com/jaystack/app-flowershop-registration.git",
+          "type": "git",
+          "url": "https://github.com/jaystack/app-flowershop-registration"
+        },
+        "type": "nodejs"
+      },
+      "dependencies": [
+        "infra-flowershop-mongodb"
+      ],
+      "name": "app-flowershop-registration",
+      "endpoints": [
+        {
+          "aliases": [
+            "localhost:3007"
+          ],
+          "environments": {},
+          "port": "3007"
+        }
+      ],
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/app-flowershop-registration"
+        }
+      ]
+    }
+  ],
+  "plugins": {
+    "basic": {
+      "vscode": {
+        "zone": "buttons"
+      }
+    }
+  }
+}
