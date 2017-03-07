@@ -1,0 +1,367 @@
+{
+  "name": "flowershop",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "workspaceImage": "molinio/workspace:0.1.11",
+  "workspaceNetwork": "flowershop",
+  "refreshTime": 60000,
+  "environments": [
+    {
+      "id": "local-git",
+      "image": "molinio/workspace:0.1.11",
+      "config": {
+        "basic": {
+          "git": {
+            "username": "$xxx",
+            "password": "$yyy"
+          },
+          "enabled": true,
+          "waitTimeout": 3000,
+          "url": "http://localhost:9000/"
+        }
+      }
+    }
+  ],
+  "environmentsAccessibility": {
+    "local": {
+      "local": "localhost",
+      "workspace": "localhost",
+      "native": "localhost",
+      "online": "10.8.0.1"
+    },
+    "workspace": {
+      "local": "localhost",
+      "workspace": "localhost",
+      "native": "localhost",
+      "online": "10.8.0.1"
+    },
+    "native": {
+      "local": "localhost",
+      "workspace": "localhost",
+      "native": "localhost",
+      "online": "10.8.0.1"
+    },
+    "online": {
+      "local": "10.8.0.6",
+      "workspace": "10.8.0.6",
+      "native": "10.8.0.6",
+      "online": "10.8.0.1"
+    }
+  },
+  "projects": [
+    {
+      "name": "app-flowershop",
+      "imagename": "molinio/workspace",
+      "path": "app-flowershop",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/app-flowershop",
+          "repository": "https://github.com/jaystack/app-flowershop.git"
+        }
+      },
+      "environments": [
+        {
+          "id": "local-git",
+          "name": "Local running with local git pull"
+        },
+        {
+          "id": "remote-docker",
+          "name": "Remote running from docker images",
+          "config": {
+            "basic": {
+              "docker": {
+                "repository": "https://hub.docker.com/",
+                "image": "molinio/workspace",
+                "version": "0.0.3",
+                "username": "$xxx",
+                "password": "$yyy"
+              }
+            }
+          },
+          "plugins": [
+            {
+              "module": "basic",
+              "widget": "dockerpull",
+              "config": {
+                "zone": "buttons_group"
+              }
+            },
+            {
+              "module": "basic",
+              "widget": "dockerstart",
+              "config": {
+                "zone": "buttons"
+              }
+            },
+            {
+              "module": "basic",
+              "widget": "RunLogNew",
+              "config": {
+                "zone": [
+                  "run_log",
+                  "project_main"
+                ]
+              }
+            },
+            {
+              "module": "basic",
+              "widget": "almafa",
+              "config": {
+                "zone": []
+              }
+            }
+          ],
+          "events": {
+            "bootup": [
+              "morning"
+            ],
+            "morning": [
+              "dockerpull",
+              "dockerstart"
+            ],
+            "change": [
+              "morning"
+            ],
+            "dockerpull": {
+              "eventName": "docker.pull"
+            },
+            "dockerstart": {
+              "eventName": "docker.start"
+            }
+          }
+        },
+        {
+          "id": "local-docker",
+          "name": "Local running in shared docker",
+          "config": {
+            "basic": {
+              "git": {
+                "repository": "https://github.com/jaystack/app-flowershop.git",
+                "username": "$xxx",
+                "password": "$yyy"
+              },
+              "docker": {
+                "repository": "https://hub.docker.com/",
+                "image": "molinio/workspace",
+                "version": "0.0.3",
+                "username": "$xxx",
+                "password": "$yyy"
+              }
+            }
+          },
+          "plugins": [
+            {
+              "module": "basic",
+              "widget": "dockerpull",
+              "config": {
+                "zone": "buttons_group"
+              }
+            },
+            {
+              "module": "basic",
+              "widget": "dockerstart",
+              "config": {
+                "zone": "buttons"
+              }
+            },
+            {
+              "module": "basic",
+              "widget": "RunLogNew",
+              "config": {
+                "zone": [
+                  "run_log",
+                  "project_main"
+                ]
+              }
+            },
+            {
+              "module": "basic",
+              "widget": "almafa",
+              "config": {
+                "zone": []
+              }
+            }
+          ],
+          "events": {
+            "bootup": [
+              "morning"
+            ],
+            "morning": [
+              "dockerpull",
+              "dockerstart",
+              "swarmextend",
+              "swarmgitpull"
+            ],
+            "dockerpull": {
+              "eventName": "docker.pull"
+            },
+            "swarmstart": {
+              "eventName": "swarm.extend"
+            },
+            "swarmgitpull": {
+              "eventName": "swarm.gitpull"
+            }
+          }
+        }
+      ],
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/app-flowershop"
+        }
+      ],
+      "start": {
+        "url": "http://localhost:9000/"
+      },
+      "commandMode": "local"
+    },
+    {
+      "name": "app-flowershop-cart",
+      "imagename": "molinio/workspace",
+      "path": "app-flowershop-cart",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/app-flowershop-cart",
+          "repository": "https://github.com/jaystack/app-flowershop-cart.git"
+        }
+      },
+      "workspaces": [
+        {
+          "type": "molinio-workspace",
+          "bootup": [
+            "install",
+            "typings",
+            "build",
+            "start"
+          ],
+          "change": [
+            "build",
+            "start"
+          ],
+          "install": {
+            "cmd": "sh",
+            "args": [
+              "-c",
+              ". $HOME/.nvm/nvm.sh && nvm exec yarn"
+            ]
+          },
+          "start": "bin/www"
+        }
+      ],
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/app-flowershop-cart"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "app-flowershop-items",
+      "imagename": "molinio/workspace",
+      "path": "app-flowershop-items",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/app-flowershop-items",
+          "repository": "https://github.com/jaystack/app-flowershop-items.git"
+        }
+      },
+      "workspaces": [
+        {
+          "type": "molinio-workspace",
+          "portMap": "3001:3001",
+          "bootup": [
+            "install",
+            "typings",
+            "build",
+            "start"
+          ],
+          "change": [
+            "build",
+            "start"
+          ],
+          "install": {
+            "cmd": "sh",
+            "args": [
+              "-c",
+              ". $HOME/.nvm/nvm.sh && nvm exec yarn"
+            ]
+          },
+          "start": "bin/www"
+        }
+      ],
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/app-flowershop-items"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "service-flowershop-data-dotnetcore",
+      "imagename": "molinio/workspace",
+      "path": "service-flowershop-data-dotnetcore",
+      "definition": {
+        "type": "dotnetcore",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/service-flowershop-data-dotnetcore",
+          "repository": "https://github.com/jaystack/service-flowershop-data-dotnetcore.git"
+        }
+      },
+      "workspaces": [
+        {
+          "type": "molinio-workspace",
+          "bootup": [
+            "restore",
+            "build",
+            "run"
+          ],
+          "change": [
+            "build",
+            "run"
+          ],
+          "install": {
+            "cmd": "sh",
+            "args": [
+              "-c",
+              ". $HOME/.nvm/nvm.sh && nvm exec yarn"
+            ]
+          },
+          "start": "Program.cs"
+        }
+      ],
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/service-flowershop-data-dotnetcore"
+        }
+      ],
+      "commandMode": "native"
+    }
+  ],
+  "plugins": {
+    "basic": {
+      "vscode": {
+        "zone": "buttons"
+      }
+    }
+  },
+  "machineName": "molinio",
+  "containerName": "molinio_workspace",
+  "share": {
+    "mountDirectory": "C:",
+    "password": "xxxx",
+    "username": "xxxx"
+  },
+  "onlineWorkspace": {
+    "hostAddress": "10.8.0.1",
+    "hostPort": "2375"
+  }
+}
