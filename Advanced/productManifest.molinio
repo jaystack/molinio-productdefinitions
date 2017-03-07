@@ -11,8 +11,8 @@
 	"environments": [],
 	"share": {
 		"mountDirectory": "c:",
-		"password": "xxxx",
-		"username": "xxxx"
+		"password": "",
+		"username": ""
 	},
 	"containerName": "molinio_workspace",
 	"machineName": "molinio",

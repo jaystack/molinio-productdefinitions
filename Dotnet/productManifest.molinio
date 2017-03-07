@@ -15,8 +15,8 @@
   ],
   "share": {
     "mountDirectory": "c:",
-    "password": "kakukk",
-    "username": "bogarbob"
+    "password": "",
+    "username": ""
   },
   "containerName": "molinio_workspace",
   "machineName": "molinio",

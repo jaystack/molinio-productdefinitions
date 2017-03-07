@@ -357,8 +357,8 @@
   "containerName": "molinio_workspace",
   "share": {
     "mountDirectory": "C:",
-    "password": "xxxx",
-    "username": "xxxx"
+    "password": "",
+    "username": ""
   },
   "onlineWorkspace": {
     "hostAddress": "10.8.0.1",
