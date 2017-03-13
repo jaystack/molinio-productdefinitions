@@ -1,6 +1,6 @@
 {
-  "name": "flowershop",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "name": "Flowershop",
+  "description": "Simple e-shop demo. Categories, products, cart etc.",
   "workspaceImage": "molinio/workspace:latest",
   "workspaceNetwork": "flowershop",
   "refreshTime": 60000,
