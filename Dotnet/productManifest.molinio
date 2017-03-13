@@ -1,6 +1,6 @@
 {
   "name": "flowershop",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "description": "Product manifest of the .NET Core Flowershop demo application.",
   "workspaceImage": "molinio/workspace:latest",
   "workspaceNetwork": "flowershop",
   "refreshTime": 60000,
@@ -9,9 +9,7 @@
     "hostPort": "2375"
   },
   "environments": [
-    "dev",
-    "stage",
-    "live"
+   
   ],
   "share": {
     "mountDirectory": "c:",
@@ -65,9 +63,7 @@
             "localhost:9000"
           ],
           "environments": {
-            "dev": "yee",
-            "live": "dfsgdf",
-            "stage": "dfgd"
+           
           },
           "port": "9000"
         }
@@ -138,9 +134,7 @@
             "localhost:3000"
           ],
           "environments": {
-            "dev": "sdf",
-            "live": "sdf",
-            "stage": "fsdf"
+          
           },
           "port": "3000"
         }
