@@ -1,6 +1,6 @@
 {
-	"name": "flowershop",
-	"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	"name": "Flowershop advanced version",
+	"description": "E-shop demo. Categories, products, cart etc.",
 	"workspaceImage": "molinio/workspace:latest",
 	"workspaceNetwork": "flowershop",
 	"refreshTime": 60000,
@@ -63,7 +63,7 @@
 					"environments": {
 						"live": "sdfg"
 					},
-					"port": "6368"
+					"port": "3934"
 				}
 			],
 			"dependencies": [
@@ -120,7 +120,7 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "4245"
+					"port": "6578"
 				}
 			]
 		},
@@ -152,7 +152,7 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "1000"
+					"port": "6752"
 				}
 			]
 		},
@@ -185,7 +185,7 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "4203"
+					"port": "2573"
 				}
 			]
 		},
@@ -215,7 +215,7 @@
 						"localhost:27017"
 					],
 					"environments": {},
-					"port": "9576"
+					"port": "7717"
 				}
 			]
 		},
@@ -238,14 +238,14 @@
 						"localhost:5672"
 					],
 					"environments": {},
-					"port": "4282"
+					"port": "4571"
 				},
 				{
 					"aliases": [
 						"localhost:15672"
 					],
 					"environments": {},
-					"port": "3051"
+					"port": "3850"
 				}
 			],
 			"links": [
@@ -321,7 +321,7 @@
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "2436"
+					"port": "4719"
 				}
 			],
 			"links": [
@@ -351,7 +351,7 @@
 					"environments": {
 						"live": "sdfg"
 					},
-					"port": "6368"
+					"port": "3934"
 				}
 			],
 			"dependencies": [
@@ -408,7 +408,7 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "4245"
+					"port": "6578"
 				}
 			]
 		},
@@ -440,7 +440,7 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "1000"
+					"port": "6752"
 				}
 			]
 		},
@@ -473,7 +473,7 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "4203"
+					"port": "2573"
 				}
 			]
 		},
@@ -503,7 +503,7 @@
 						"localhost:27017"
 					],
 					"environments": {},
-					"port": "9576"
+					"port": "7717"
 				}
 			],
 			"path": "infra-flowershop-mongodb_1"
@@ -527,14 +527,14 @@
 						"localhost:5672"
 					],
 					"environments": {},
-					"port": "4282"
+					"port": "4571"
 				},
 				{
 					"aliases": [
 						"localhost:15672"
 					],
 					"environments": {},
-					"port": "3051"
+					"port": "3850"
 				}
 			],
 			"links": [
@@ -613,7 +613,7 @@
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "2436"
+					"port": "4719"
 				}
 			],
 			"links": [
@@ -644,7 +644,7 @@
 					"environments": {
 						"live": "sdfg"
 					},
-					"port": "6368"
+					"port": "3934"
 				}
 			],
 			"dependencies": [
@@ -701,7 +701,7 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "4245"
+					"port": "6578"
 				}
 			]
 		},
@@ -733,7 +733,7 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "1000"
+					"port": "6752"
 				}
 			]
 		},
@@ -766,7 +766,7 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "4203"
+					"port": "2573"
 				}
 			]
 		},
@@ -796,7 +796,7 @@
 						"localhost:27017"
 					],
 					"environments": {},
-					"port": "9576"
+					"port": "7717"
 				}
 			],
 			"path": "infra-flowershop-mongodb_2"
@@ -820,14 +820,14 @@
 						"localhost:5672"
 					],
 					"environments": {},
-					"port": "4282"
+					"port": "4571"
 				},
 				{
 					"aliases": [
 						"localhost:15672"
 					],
 					"environments": {},
-					"port": "3051"
+					"port": "3850"
 				}
 			],
 			"links": [
@@ -906,7 +906,7 @@
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "2436"
+					"port": "4719"
 				}
 			],
 			"links": [
@@ -937,7 +937,7 @@
 					"environments": {
 						"live": "sdfg"
 					},
-					"port": "6368"
+					"port": "3934"
 				}
 			],
 			"dependencies": [
@@ -994,7 +994,7 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "4245"
+					"port": "6578"
 				}
 			]
 		},
@@ -1026,7 +1026,7 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "1000"
+					"port": "6752"
 				}
 			]
 		},
@@ -1059,7 +1059,7 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "4203"
+					"port": "2573"
 				}
 			]
 		},
@@ -1089,7 +1089,7 @@
 						"localhost:27017"
 					],
 					"environments": {},
-					"port": "9576"
+					"port": "7717"
 				}
 			],
 			"path": "infra-flowershop-mongodb_3"
@@ -1113,14 +1113,14 @@
 						"localhost:5672"
 					],
 					"environments": {},
-					"port": "4282"
+					"port": "4571"
 				},
 				{
 					"aliases": [
 						"localhost:15672"
 					],
 					"environments": {},
-					"port": "3051"
+					"port": "3850"
 				}
 			],
 			"links": [
@@ -1199,7 +1199,7 @@
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "2436"
+					"port": "4719"
 				}
 			],
 			"links": [
@@ -1230,7 +1230,7 @@
 					"environments": {
 						"live": "sdfg"
 					},
-					"port": "6368"
+					"port": "3934"
 				}
 			],
 			"dependencies": [
@@ -1287,7 +1287,7 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "4245"
+					"port": "6578"
 				}
 			]
 		},
@@ -1319,7 +1319,7 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "1000"
+					"port": "6752"
 				}
 			]
 		},
@@ -1352,7 +1352,7 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "4203"
+					"port": "2573"
 				}
 			]
 		},
@@ -1382,7 +1382,7 @@
 						"localhost:27017"
 					],
 					"environments": {},
-					"port": "9576"
+					"port": "7717"
 				}
 			],
 			"path": "infra-flowershop-mongodb_4"
@@ -1406,14 +1406,14 @@
 						"localhost:5672"
 					],
 					"environments": {},
-					"port": "4282"
+					"port": "4571"
 				},
 				{
 					"aliases": [
 						"localhost:15672"
 					],
 					"environments": {},
-					"port": "3051"
+					"port": "3850"
 				}
 			],
 			"links": [
@@ -1492,7 +1492,7 @@
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "2436"
+					"port": "4719"
 				}
 			],
 			"links": [
