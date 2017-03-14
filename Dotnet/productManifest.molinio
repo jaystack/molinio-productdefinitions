@@ -207,6 +207,9 @@
       "dependencies": [
         "infra-flowershop-mongodb"
       ],
+      "mandatoryDependencies": [
+        0
+      ],
       "definition": {
         "type": "dotnetcore",
         "source": {

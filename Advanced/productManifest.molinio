@@ -164,6 +164,10 @@
 				"infra-flowershop-rabbitmq",
 				"infra-flowershop-mongodb"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"definition": {
 				"type": "nodejs",
 				"source": {
@@ -270,6 +274,10 @@
 				"infra-flowershop-rabbitmq",
 				"infra-flowershop-mongodb"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"name": "service-flowershop-notifications",
 			"links": [
 				{
@@ -292,6 +300,9 @@
 			"dependencies": [
 				"infra-flowershop-rabbitmq"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "service-flowershop-logger",
 			"links": [
 				{
@@ -314,6 +325,9 @@
 			"dependencies": [
 				"infra-flowershop-mongodb"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "app-flowershop-registration",
 			"endpoints": [
 				{
@@ -452,6 +466,10 @@
 				"infra-flowershop-rabbitmq_1",
 				"infra-flowershop-mongodb_1"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"definition": {
 				"type": "nodejs",
 				"source": {
@@ -560,6 +578,10 @@
 				"infra-flowershop-rabbitmq_1",
 				"infra-flowershop-mongodb_1"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"name": "service-flowershop-notifications_1",
 			"links": [
 				{
@@ -583,6 +605,9 @@
 			"dependencies": [
 				"infra-flowershop-rabbitmq_1"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "service-flowershop-logger_1",
 			"links": [
 				{
@@ -606,6 +631,9 @@
 			"dependencies": [
 				"infra-flowershop-mongodb_1"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "app-flowershop-registration_1",
 			"endpoints": [
 				{
@@ -745,6 +773,10 @@
 				"infra-flowershop-rabbitmq_2",
 				"infra-flowershop-mongodb_2"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"definition": {
 				"type": "nodejs",
 				"source": {
@@ -853,6 +885,10 @@
 				"infra-flowershop-rabbitmq_2",
 				"infra-flowershop-mongodb_2"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"name": "service-flowershop-notifications_2",
 			"links": [
 				{
@@ -876,6 +912,9 @@
 			"dependencies": [
 				"infra-flowershop-rabbitmq_2"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "service-flowershop-logger_2",
 			"links": [
 				{
@@ -899,6 +938,9 @@
 			"dependencies": [
 				"infra-flowershop-mongodb_2"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "app-flowershop-registration_2",
 			"endpoints": [
 				{
@@ -1038,6 +1080,10 @@
 				"infra-flowershop-rabbitmq_3",
 				"infra-flowershop-mongodb_3"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"definition": {
 				"type": "nodejs",
 				"source": {
@@ -1146,6 +1192,10 @@
 				"infra-flowershop-rabbitmq_3",
 				"infra-flowershop-mongodb_3"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"name": "service-flowershop-notifications_3",
 			"links": [
 				{
@@ -1169,6 +1219,9 @@
 			"dependencies": [
 				"infra-flowershop-rabbitmq_3"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "service-flowershop-logger_3",
 			"links": [
 				{
@@ -1192,6 +1245,9 @@
 			"dependencies": [
 				"infra-flowershop-mongodb_3"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "app-flowershop-registration_3",
 			"endpoints": [
 				{
@@ -1331,6 +1387,10 @@
 				"infra-flowershop-rabbitmq_4",
 				"infra-flowershop-mongodb_4"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"definition": {
 				"type": "nodejs",
 				"source": {
@@ -1439,6 +1499,10 @@
 				"infra-flowershop-rabbitmq_4",
 				"infra-flowershop-mongodb_4"
 			],
+      "mandatoryDependencies": [
+        0,
+				1
+      ],
 			"name": "service-flowershop-notifications_4",
 			"links": [
 				{
@@ -1462,6 +1526,9 @@
 			"dependencies": [
 				"infra-flowershop-rabbitmq_4"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "service-flowershop-logger_4",
 			"links": [
 				{
@@ -1485,6 +1552,9 @@
 			"dependencies": [
 				"infra-flowershop-mongodb_4"
 			],
+      "mandatoryDependencies": [
+        0
+      ],
 			"name": "app-flowershop-registration_4",
 			"endpoints": [
 				{

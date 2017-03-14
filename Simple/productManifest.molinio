@@ -164,6 +164,10 @@
         "infra-flowershop-rabbitmq",
         "infra-flowershop-mongodb"
       ],
+      "mandatoryDependencies": [
+        0,
+        1
+      ],
       "definition": {
         "type": "nodejs",
         "source": {
@@ -270,6 +274,10 @@
         "infra-flowershop-rabbitmq",
         "infra-flowershop-mongodb"
       ],
+      "mandatoryDependencies": [
+        0,
+        1
+      ],
       "name": "service-flowershop-notifications",
       "links": [
         {
@@ -292,6 +300,9 @@
       "dependencies": [
         "infra-flowershop-rabbitmq"
       ],
+      "mandatoryDependencies": [
+        0
+      ],
       "name": "service-flowershop-logger",
       "links": [
         {
@@ -313,6 +324,9 @@
       },
       "dependencies": [
         "infra-flowershop-mongodb"
+      ],
+      "mandatoryDependencies": [
+        0
       ],
       "name": "app-flowershop-registration",
       "endpoints": [
