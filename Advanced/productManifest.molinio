@@ -463,8 +463,8 @@
 			"imagename": "molinio/workspace",
 			"path": "service-flowershop-data_1",
 			"dependencies": [
-				"infra-flowershop-rabbitmq_1",
-				"infra-flowershop-mongodb_1"
+				"infra-flowershop-rabbitmq",
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0,
@@ -496,74 +496,6 @@
 			]
 		},
 		{
-			"name": "infra-flowershop-mongodb_1",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"type": "mongodb",
-				"composeFile": "docker-compose.yml",
-				"source": {
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-mongodb.git",
-					"repository": "https://github.com/jaystack/infra-flowershop-mongodb.git"
-				}
-			},
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-mongodb.git"
-				}
-			],
-			"commandMode": "native",
-			"dependencies": [],
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:27017"
-					],
-					"environments": {},
-					"port": "1848:27017"
-				}
-			],
-			"path": "infra-flowershop-mongodb_1"
-		},
-		{
-			"commandMode": "native",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"source": {
-					"repository": "https://github.com/jaystack/infra-flowershop-rabbitmq.git",
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				},
-				"type": "docker"
-			},
-			"dependencies": [],
-			"name": "infra-flowershop-rabbitmq_1",
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:5672"
-					],
-					"environments": {},
-					"port": "3245:5672"
-				},
-				{
-					"aliases": [
-						"localhost:15672"
-					],
-					"environments": {},
-					"port": "6140:15672"
-				}
-			],
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				}
-			],
-			"path": "infra-flowershop-rabbitmq_1"
-		},
-		{
 			"commandMode": "local",
 			"imagename": "molinio/workspace",
 			"definition": {
@@ -575,8 +507,8 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-rabbitmq_1",
-				"infra-flowershop-mongodb_1"
+				"infra-flowershop-rabbitmq",
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0,
@@ -603,7 +535,7 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-rabbitmq_1"
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0
@@ -629,7 +561,7 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-mongodb_1"
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0
@@ -770,8 +702,8 @@
 			"imagename": "molinio/workspace",
 			"path": "service-flowershop-data_2",
 			"dependencies": [
-				"infra-flowershop-rabbitmq_2",
-				"infra-flowershop-mongodb_2"
+				"infra-flowershop-rabbitmq",
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0,
@@ -803,74 +735,6 @@
 			]
 		},
 		{
-			"name": "infra-flowershop-mongodb_2",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"type": "mongodb",
-				"composeFile": "docker-compose.yml",
-				"source": {
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-mongodb.git",
-					"repository": "https://github.com/jaystack/infra-flowershop-mongodb.git"
-				}
-			},
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-mongodb.git"
-				}
-			],
-			"commandMode": "native",
-			"dependencies": [],
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:27017"
-					],
-					"environments": {},
-					"port": "5043:27017"
-				}
-			],
-			"path": "infra-flowershop-mongodb_2"
-		},
-		{
-			"commandMode": "native",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"source": {
-					"repository": "https://github.com/jaystack/infra-flowershop-rabbitmq.git",
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				},
-				"type": "docker"
-			},
-			"dependencies": [],
-			"name": "infra-flowershop-rabbitmq_2",
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:5672"
-					],
-					"environments": {},
-					"port": "1962:5672"
-				},
-				{
-					"aliases": [
-						"localhost:15672"
-					],
-					"environments": {},
-					"port": "5603:15672"
-				}
-			],
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				}
-			],
-			"path": "infra-flowershop-rabbitmq_2"
-		},
-		{
 			"commandMode": "local",
 			"imagename": "molinio/workspace",
 			"definition": {
@@ -882,8 +746,8 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-rabbitmq_2",
-				"infra-flowershop-mongodb_2"
+				"infra-flowershop-rabbitmq",
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0,
@@ -910,7 +774,7 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-rabbitmq_2"
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0
@@ -936,7 +800,7 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-mongodb_2"
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0
@@ -1077,8 +941,8 @@
 			"imagename": "molinio/workspace",
 			"path": "service-flowershop-data_3",
 			"dependencies": [
-				"infra-flowershop-rabbitmq_3",
-				"infra-flowershop-mongodb_3"
+				"infra-flowershop-rabbitmq",
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0,
@@ -1110,74 +974,6 @@
 			]
 		},
 		{
-			"name": "infra-flowershop-mongodb_3",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"type": "mongodb",
-				"composeFile": "docker-compose.yml",
-				"source": {
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-mongodb.git",
-					"repository": "https://github.com/jaystack/infra-flowershop-mongodb.git"
-				}
-			},
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-mongodb.git"
-				}
-			],
-			"commandMode": "native",
-			"dependencies": [],
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:27017"
-					],
-					"environments": {},
-					"port": "2088:27017"
-				}
-			],
-			"path": "infra-flowershop-mongodb_3"
-		},
-		{
-			"commandMode": "native",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"source": {
-					"repository": "https://github.com/jaystack/infra-flowershop-rabbitmq.git",
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				},
-				"type": "docker"
-			},
-			"dependencies": [],
-			"name": "infra-flowershop-rabbitmq_3",
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:5672"
-					],
-					"environments": {},
-					"port": "4661:5672"
-				},
-				{
-					"aliases": [
-						"localhost:15672"
-					],
-					"environments": {},
-					"port": "6252:15672"
-				}
-			],
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				}
-			],
-			"path": "infra-flowershop-rabbitmq_3"
-		},
-		{
 			"commandMode": "local",
 			"imagename": "molinio/workspace",
 			"definition": {
@@ -1189,8 +985,8 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-rabbitmq_3",
-				"infra-flowershop-mongodb_3"
+				"infra-flowershop-rabbitmq",
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0,
@@ -1217,7 +1013,7 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-rabbitmq_3"
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0
@@ -1243,7 +1039,7 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-mongodb_3"
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0
@@ -1384,8 +1180,8 @@
 			"imagename": "molinio/workspace",
 			"path": "service-flowershop-data_4",
 			"dependencies": [
-				"infra-flowershop-rabbitmq_4",
-				"infra-flowershop-mongodb_4"
+				"infra-flowershop-rabbitmq",
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0,
@@ -1416,75 +1212,7 @@
 				}
 			]
 		},
-		{
-			"name": "infra-flowershop-mongodb_4",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"type": "mongodb",
-				"composeFile": "docker-compose.yml",
-				"source": {
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-mongodb.git",
-					"repository": "https://github.com/jaystack/infra-flowershop-mongodb.git"
-				}
-			},
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-mongodb.git"
-				}
-			],
-			"commandMode": "native",
-			"dependencies": [],
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:27017"
-					],
-					"environments": {},
-					"port": "5252:27017"
-				}
-			],
-			"path": "infra-flowershop-mongodb_4"
-		},
-		{
-			"commandMode": "native",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"source": {
-					"repository": "https://github.com/jaystack/infra-flowershop-rabbitmq.git",
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				},
-				"type": "docker"
-			},
-			"dependencies": [],
-			"name": "infra-flowershop-rabbitmq_4",
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:5672"
-					],
-					"environments": {},
-					"port": "5283:5672"
-				},
-				{
-					"aliases": [
-						"localhost:15672"
-					],
-					"environments": {},
-					"port": "5455:15672"
-				}
-			],
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				}
-			],
-			"path": "infra-flowershop-rabbitmq_4"
-		},
-		{
+{
 			"commandMode": "local",
 			"imagename": "molinio/workspace",
 			"definition": {
@@ -1496,8 +1224,8 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-rabbitmq_4",
-				"infra-flowershop-mongodb_4"
+				"infra-flowershop-rabbitmq",
+				"infra-flowershop-mongodb"
 			],
 			"mandatoryDependencies": [
 				0,
@@ -1524,7 +1252,7 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-rabbitmq_4"
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0
@@ -1550,7 +1278,7 @@
 				"type": "nodejs"
 			},
 			"dependencies": [
-				"infra-flowershop-mongodb_4"
+				"infra-flowershop-rabbitmq"
 			],
 			"mandatoryDependencies": [
 				0
