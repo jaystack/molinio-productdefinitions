@@ -211,7 +211,7 @@
           "link": "https://github.com/jaystack/infra-flowershop-mongodb.git"
         }
       ],
-      "commandMode": "skip",
+      "commandMode": "native",
       "dependencies": [],
       "endpoints": [
         {
@@ -224,7 +224,7 @@
       ]
     },
     {
-      "commandMode": "skip",
+      "commandMode": "native",
       "imagename": "molinio/workspace",
       "definition": {
         "source": {
