@@ -1,5 +1,5 @@
 {
-	"name": "Flowershop advanced version",
+	"name": "Flowershop_advanced_version",
 	"description": "E-shop demo. Categories, products, cart etc.",
 	"workspaceImage": "molinio/workspace:latest",
 	"workspaceNetwork": "flowershop",
