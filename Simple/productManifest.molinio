@@ -60,9 +60,7 @@
           "aliases": [
             "localhost:9000"
           ],
-          "environments": {
-            "live": "sdfg"
-          },
+          "environments": {},
           "port": "9000"
         }
       ],
