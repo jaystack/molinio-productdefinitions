@@ -1,5 +1,5 @@
 {
-  "name": "flowershop",
+  "name": "FlowershopNET",
   "description": "Product manifest of the .NET Core Flowershop demo application.",
   "workspaceImage": "molinio/workspace:latest",
   "workspaceNetwork": "flowershop",
@@ -8,9 +8,7 @@
     "hostAddress": "10.8.0.1",
     "hostPort": "2375"
   },
-  "environments": [
-   
-  ],
+  "environments": [],
   "share": {
     "mountDirectory": "c:",
     "password": "",
@@ -48,7 +46,6 @@
     {
       "name": "app-flowershop-dotnetcore",
       "imagename": "molinio/workspace",
-      "path": "app-flowershop",
       "definition": {
         "type": "dotnetcore",
         "source": {
@@ -62,9 +59,7 @@
           "aliases": [
             "localhost:9000"
           ],
-          "environments": {
-           
-          },
+          "environments": {},
           "port": "9000"
         }
       ],
@@ -81,7 +76,7 @@
       "start": {
         "url": "http://localhost:9000/"
       },
-      "commandMode": "workspace"
+      "commandMode": "local"
     },
     {
       "name": "app-flowershop-cart-dotnetcore",
@@ -98,44 +93,19 @@
           "repository": "https://github.com/jaystack/app-flowershop-cart-dotnetcore.git"
         }
       },
-      "workspaces": [
-        {
-          "type": "molinio-workspace",
-          "bootup": [
-            "install",
-            "typings",
-            "build",
-            "start"
-          ],
-          "change": [
-            "build",
-            "start"
-          ],
-          "install": {
-            "cmd": "sh",
-            "args": [
-              "-c",
-              ". $HOME/.nvm/nvm.sh && nvm exec yarn"
-            ]
-          },
-          "start": "bin/www"
-        }
-      ],
       "links": [
         {
           "icon": "fa-github",
           "link": "https://github.com/jaystack/app-flowershop-cart-dotnetcore"
         }
       ],
-      "commandMode": "workspace",
+      "commandMode": "local",
       "endpoints": [
         {
           "aliases": [
             "localhost:3000"
           ],
-          "environments": {
-          
-          },
+          "environments": {},
           "port": "3000"
         }
       ]
@@ -155,47 +125,19 @@
           "repository": "https://github.com/jaystack/app-flowershop-items-dotnetcore.git"
         }
       },
-      "workspaces": [
-        {
-          "type": "molinio-workspace",
-          "portMap": "3001:3001",
-          "bootup": [
-            "install",
-            "typings",
-            "build",
-            "start"
-          ],
-          "change": [
-            "build",
-            "start"
-          ],
-          "install": {
-            "cmd": "sh",
-            "args": [
-              "-c",
-              ". $HOME/.nvm/nvm.sh && nvm exec yarn"
-            ]
-          },
-          "start": "bin/www"
-        }
-      ],
       "links": [
         {
           "icon": "fa-github",
           "link": "https://github.com/jaystack/app-flowershop-items-dotnetcore"
         }
       ],
-      "commandMode": "workspace",
+      "commandMode": "local",
       "endpoints": [
         {
           "aliases": [
             "localhost:3001"
           ],
-          "environments": {
-            "dev": "sdf",
-            "live": "sdf",
-            "stage": "sdaf"
-          },
+          "environments": {},
           "port": "3001"
         }
       ]
@@ -218,45 +160,19 @@
           "repository": "https://github.com/jaystack/service-flowershop-data-dotnetcore.git"
         }
       },
-      "workspaces": [
-        {
-          "type": "molinio-workspace",
-          "bootup": [
-            "restore",
-            "build",
-            "run"
-          ],
-          "change": [
-            "build",
-            "run"
-          ],
-          "install": {
-            "cmd": "sh",
-            "args": [
-              "-c",
-              ". $HOME/.nvm/nvm.sh && nvm exec yarn"
-            ]
-          },
-          "start": "Program.cs"
-        }
-      ],
       "links": [
         {
           "icon": "fa-github",
           "link": "https://github.com/jaystack/service-flowershop-data-dotnetcore"
         }
       ],
-      "commandMode": "workspace",
+      "commandMode": "local",
       "endpoints": [
         {
           "aliases": [
             "localhost:3003"
           ],
-          "environments": {
-            "dev": "sdf",
-            "live": "sdf",
-            "stage": "sdf"
-          },
+          "environments": {},
           "port": "3003"
         }
       ]
@@ -265,7 +181,7 @@
       "name": "infra-flowershop-mongodb",
       "imagename": "molinio/workspace",
       "definition": {
-        "type": "docker",
+        "type": "mongodb",
         "composeFile": "docker-compose.yml",
         "source": {
           "type": "git",
@@ -279,19 +195,14 @@
           "link": "https://github.com/jaystack/infra-flowershop-mongodb.git"
         }
       ],
-      "commandMode": "workspace",
+      "commandMode": "native",
       "dependencies": [],
       "endpoints": [
         {
           "aliases": [
-            "mongodb://localhost:27017",
             "localhost:27017"
           ],
-          "environments": {
-            "dev": "sdaf",
-            "live": "sdf",
-            "stage": "sadf"
-          },
+          "environments": {},
           "port": "27017"
         }
       ]
