@@ -1,5 +1,5 @@
 {
-  "name": "FlowershopNET",
+  "name": "Flowershop-dotnet",
   "description": "Product manifest of the .NET Core Flowershop demo application.",
   "workspaceImage": "molinio/workspace:latest",
   "workspaceNetwork": "flowershop",
