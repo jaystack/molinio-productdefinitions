@@ -1,5 +1,5 @@
 {
-  "name": "FlowershopMIXIN",
+  "name": "Flowershop-MIXED",
   "description": "Product manifest of nodejs and .NET Core Flowershop demo application.",
   "workspaceImage": "molinio/workspace:latest",
   "workspaceNetwork": "flowershop",
@@ -66,7 +66,9 @@
       ],
       "dependencies": [
         "app-flowershop-items",
-        "app-flowershop-cart"
+        "app-flowershop-cart",
+        "app-flowershop-registration"
+
       ],
       "links": [
         {
@@ -213,6 +215,40 @@
           ],
           "environments": {},
           "port": "27017"
+        }
+      ]
+    },
+    {
+      "commandMode": "local",
+      "imagename": "molinio/workspace",
+      "definition": {
+        "source": {
+          "repository": "https://github.com/jaystack/app-flowershop-registration.git",
+          "type": "git",
+          "url": "https://github.com/jaystack/app-flowershop-registration"
+        },
+        "type": "nodejs"
+      },
+      "dependencies": [
+        "infra-flowershop-mongodb"
+      ],
+      "mandatoryDependencies": [
+        0
+      ],
+      "name": "app-flowershop-registration",
+      "endpoints": [
+        {
+          "aliases": [
+            "localhost:3007"
+          ],
+          "environments": {},
+          "port": "3007"
+        }
+      ],
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/app-flowershop-registration"
         }
       ]
     }
