@@ -44,9 +44,8 @@
   },
   "projects": [
     {
-      "name": "app-flowershop",
+      "name": "app-flowershop-mixed",
       "imagename": "molinio/workspace",
-      "path": "app-flowershop",
       "definition": {
         "type": "nodejs",
         "source": {
@@ -65,9 +64,9 @@
         }
       ],
       "dependencies": [
-        "app-flowershop-items",
-        "app-flowershop-cart",
-        "app-flowershop-registration"
+        "app-flowershop-items-mixed",
+        "app-flowershop-cart-mixed",
+        "app-flowershop-registration-mixed"
 
       ],
       "links": [
@@ -90,11 +89,10 @@
       }
     },
     {
-      "name": "app-flowershop-cart",
+      "name": "app-flowershop-cart-mixed",
       "imagename": "molinio/workspace",
-      "path": "app-flowershop-cart",
       "dependencies": [
-        "service-flowershop-data-dotnetcore"
+        "service-flowershop-data-dotnetcore-mixed"
       ],
       "definition": {
         "type": "nodejs",
@@ -122,11 +120,10 @@
       ]
     },
     {
-      "name": "app-flowershop-items",
+      "name": "app-flowershop-items-mixed",
       "imagename": "molinio/workspace",
-      "path": "app-flowershop-items",
       "dependencies": [
-        "service-flowershop-data-dotnetcore"
+        "service-flowershop-data-dotnetcore-mixed"
       ],
       "definition": {
         "type": "nodejs",
@@ -154,9 +151,8 @@
       ]
     },
     {
-      "name": "service-flowershop-data-dotnetcore",
+      "name": "service-flowershop-data-dotnetcore-mixed",
       "imagename": "molinio/workspace",
-      "path": "service-flowershop-data-dotnetcore",
       "dependencies": [
         "infra-flowershop-mongodb"
       ],
@@ -235,7 +231,7 @@
       "mandatoryDependencies": [
         0
       ],
-      "name": "app-flowershop-registration",
+      "name": "app-flowershop-registration-mixed",
       "endpoints": [
         {
           "aliases": [
