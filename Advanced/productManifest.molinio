@@ -1,6 +1,6 @@
 {
-	"name": "Flowershop_advanced_version",
-	"description": "Simple e-shop demo. Categories, products, cart etc.",
+	"name": "Flowershop-advanced",
+	"description": "Advanced e-shop demo. Categories, products, cart etc.",
 	"workspaceImage": "molinio/workspace:latest",
 	"workspaceNetwork": "flowershop",
 	"refreshTime": 60000,
@@ -44,9 +44,9 @@
 	},
 	"projects": [
 		{
-			"name": "app-flowershop",
+			"name": "app-flowershop_0",
 			"imagename": "molinio/workspace",
-			"path": "app-flowershop",
+			"path": "app-flowershop_0",
 			"definition": {
 				"type": "nodejs",
 				"source": {
@@ -60,18 +60,16 @@
 					"aliases": [
 						"localhost:9000"
 					],
-					"environments": {
-						"live": "sdfg"
-					},
-					"port": "9000"
+					"environments": {},
+					"port": "2490"
 				}
 			],
 			"dependencies": [
-				"app-flowershop-items",
-				"app-flowershop-cart",
-				"app-flowershop-registration",
-				"service-flowershop-logger",
-				"service-flowershop-notifications"
+				"app-flowershop-items_0",
+				"app-flowershop-cart_0",
+				"app-flowershop-registration_0",
+				"service-flowershop-logger_0",
+				"service-flowershop-notifications_0"
 			],
 			"links": [
 				{
@@ -80,7 +78,7 @@
 				}
 			],
 			"start": {
-				"url": "http://localhost:9000/"
+				"url": "http://localhost:2490/"
 			},
 			"commandMode": "local",
 			"state": {
@@ -90,14 +88,19 @@
 					"status": null,
 					"updated": 1486465470293
 				}
+			},
+			"config": {
+				"server": {
+					"port": 2490
+				}
 			}
 		},
 		{
-			"name": "app-flowershop-cart",
+			"name": "app-flowershop-cart_0",
 			"imagename": "molinio/workspace",
-			"path": "app-flowershop-cart",
+			"path": "app-flowershop-cart_0",
 			"dependencies": [
-				"service-flowershop-data"
+				"service-flowershop-data_0"
 			],
 			"definition": {
 				"type": "nodejs",
@@ -120,16 +123,21 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "3000"
+					"port": "1927"
 				}
-			]
+			],
+			"config": {
+				"server": {
+					"port": 1927
+				}
+			}
 		},
 		{
-			"name": "app-flowershop-items",
+			"name": "app-flowershop-items_0",
 			"imagename": "molinio/workspace",
-			"path": "app-flowershop-items",
+			"path": "app-flowershop-items_0",
 			"dependencies": [
-				"service-flowershop-data"
+				"service-flowershop-data_0"
 			],
 			"definition": {
 				"type": "nodejs",
@@ -152,14 +160,19 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "3001"
+					"port": "6872"
 				}
-			]
+			],
+			"config": {
+				"server": {
+					"port": 6872
+				}
+			}
 		},
 		{
-			"name": "service-flowershop-data",
+			"name": "service-flowershop-data_0",
 			"imagename": "molinio/workspace",
-			"path": "service-flowershop-data",
+			"path": "service-flowershop-data_0",
 			"dependencies": [
 				"infra-flowershop-rabbitmq",
 				"infra-flowershop-mongodb"
@@ -189,75 +202,14 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "3003"
-				}
-			]
-		},
-		{
-			"name": "infra-flowershop-mongodb",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"type": "mongodb",
-				"composeFile": "docker-compose.yml",
-				"source": {
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-mongodb.git",
-					"repository": "https://github.com/jaystack/infra-flowershop-mongodb.git"
-				}
-			},
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-mongodb.git"
+					"port": "3749"
 				}
 			],
-			"commandMode": "native",
-			"dependencies": [],
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:27017"
-					],
-					"environments": {},
-					"port": "27017"
+			"config": {
+				"server": {
+					"port": 3749
 				}
-			]
-		},
-		{
-			"commandMode": "native",
-			"imagename": "molinio/workspace",
-			"definition": {
-				"source": {
-					"repository": "https://github.com/jaystack/infra-flowershop-rabbitmq.git",
-					"type": "git",
-					"url": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				},
-				"type": "docker"
-			},
-			"dependencies": [],
-			"name": "infra-flowershop-rabbitmq",
-			"endpoints": [
-				{
-					"aliases": [
-						"localhost:5672"
-					],
-					"environments": {},
-					"port": "5672"
-				},
-				{
-					"aliases": [
-						"localhost:15672"
-					],
-					"environments": {},
-					"port": "15672"
-				}
-			],
-			"links": [
-				{
-					"icon": "fa-github",
-					"link": "https://github.com/jaystack/infra-flowershop-rabbitmq"
-				}
-			]
+			}
 		},
 		{
 			"commandMode": "local",
@@ -278,13 +230,14 @@
 				0,
 				1
 			],
-			"name": "service-flowershop-notifications",
+			"name": "service-flowershop-notifications_0",
 			"links": [
 				{
 					"icon": "fa-github",
 					"link": "https://github.com/jaystack/service-flowershop-notifications"
 				}
-			]
+			],
+			"path": "service-flowershop-notifications_0"
 		},
 		{
 			"commandMode": "local",
@@ -303,13 +256,14 @@
 			"mandatoryDependencies": [
 				0
 			],
-			"name": "service-flowershop-logger",
+			"name": "service-flowershop-logger_0",
 			"links": [
 				{
 					"icon": "fa-github",
 					"link": "https://github.com/jaystack/service-flowershop-logger"
 				}
-			]
+			],
+			"path": "service-flowershop-logger_0"
 		},
 		{
 			"commandMode": "local",
@@ -328,14 +282,14 @@
 			"mandatoryDependencies": [
 				0
 			],
-			"name": "app-flowershop-registration",
+			"name": "app-flowershop-registration_0",
 			"endpoints": [
 				{
 					"aliases": [
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "3007"
+					"port": "8944"
 				}
 			],
 			"links": [
@@ -343,7 +297,13 @@
 					"icon": "fa-github",
 					"link": "https://github.com/jaystack/app-flowershop-registration"
 				}
-			]
+			],
+			"path": "app-flowershop-registration_0",
+			"config": {
+				"server": {
+					"port": 8944
+				}
+			}
 		},
 		{
 			"name": "app-flowershop_1",
@@ -362,10 +322,8 @@
 					"aliases": [
 						"localhost:9000"
 					],
-					"environments": {
-						"live": "sdfg"
-					},
-					"port": "3352"
+					"environments": {},
+					"port": "6440"
 				}
 			],
 			"dependencies": [
@@ -382,7 +340,7 @@
 				}
 			],
 			"start": {
-				"url": "http://localhost:3352/"
+				"url": "http://localhost:6440/"
 			},
 			"commandMode": "local",
 			"state": {
@@ -395,7 +353,7 @@
 			},
 			"config": {
 				"server": {
-					"port": 3352
+					"port": 6440
 				}
 			}
 		},
@@ -427,12 +385,12 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "3851"
+					"port": "3821"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 3851
+					"port": 3821
 				}
 			}
 		},
@@ -464,12 +422,12 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "2745"
+					"port": "7505"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 2745
+					"port": 7505
 				}
 			}
 		},
@@ -506,12 +464,12 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "6566"
+					"port": "4490"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 6566
+					"port": 4490
 				}
 			}
 		},
@@ -593,7 +551,7 @@
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "1565"
+					"port": "6291"
 				}
 			],
 			"links": [
@@ -605,7 +563,7 @@
 			"path": "app-flowershop-registration_1",
 			"config": {
 				"server": {
-					"port": 1565
+					"port": 6291
 				}
 			}
 		},
@@ -626,10 +584,8 @@
 					"aliases": [
 						"localhost:9000"
 					],
-					"environments": {
-						"live": "sdfg"
-					},
-					"port": "2769"
+					"environments": {},
+					"port": "8514"
 				}
 			],
 			"dependencies": [
@@ -646,7 +602,7 @@
 				}
 			],
 			"start": {
-				"url": "http://localhost:2769/"
+				"url": "http://localhost:8514/"
 			},
 			"commandMode": "local",
 			"state": {
@@ -659,7 +615,7 @@
 			},
 			"config": {
 				"server": {
-					"port": 2769
+					"port": 8514
 				}
 			}
 		},
@@ -691,12 +647,12 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "1851"
+					"port": "4014"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 1851
+					"port": 4014
 				}
 			}
 		},
@@ -728,12 +684,12 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "1743"
+					"port": "6390"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 1743
+					"port": 6390
 				}
 			}
 		},
@@ -770,12 +726,12 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "8541"
+					"port": "9469"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 8541
+					"port": 9469
 				}
 			}
 		},
@@ -857,7 +813,7 @@
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "9145"
+					"port": "5004"
 				}
 			],
 			"links": [
@@ -869,7 +825,7 @@
 			"path": "app-flowershop-registration_2",
 			"config": {
 				"server": {
-					"port": 9145
+					"port": 5004
 				}
 			}
 		},
@@ -890,10 +846,8 @@
 					"aliases": [
 						"localhost:9000"
 					],
-					"environments": {
-						"live": "sdfg"
-					},
-					"port": "5468"
+					"environments": {},
+					"port": "5732"
 				}
 			],
 			"dependencies": [
@@ -910,7 +864,7 @@
 				}
 			],
 			"start": {
-				"url": "http://localhost:5468/"
+				"url": "http://localhost:5732/"
 			},
 			"commandMode": "local",
 			"state": {
@@ -923,7 +877,7 @@
 			},
 			"config": {
 				"server": {
-					"port": 5468
+					"port": 5732
 				}
 			}
 		},
@@ -955,12 +909,12 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "6141"
+					"port": "5084"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 6141
+					"port": 5084
 				}
 			}
 		},
@@ -992,12 +946,12 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "7548"
+					"port": "6046"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 7548
+					"port": 6046
 				}
 			}
 		},
@@ -1034,12 +988,12 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "9340"
+					"port": "3803"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 9340
+					"port": 3803
 				}
 			}
 		},
@@ -1121,7 +1075,7 @@
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "6122"
+					"port": "6268"
 				}
 			],
 			"links": [
@@ -1133,7 +1087,7 @@
 			"path": "app-flowershop-registration_3",
 			"config": {
 				"server": {
-					"port": 6122
+					"port": 6268
 				}
 			}
 		},
@@ -1154,10 +1108,8 @@
 					"aliases": [
 						"localhost:9000"
 					],
-					"environments": {
-						"live": "sdfg"
-					},
-					"port": "8929"
+					"environments": {},
+					"port": "9616"
 				}
 			],
 			"dependencies": [
@@ -1174,7 +1126,7 @@
 				}
 			],
 			"start": {
-				"url": "http://localhost:8929/"
+				"url": "http://localhost:9616/"
 			},
 			"commandMode": "local",
 			"state": {
@@ -1187,7 +1139,7 @@
 			},
 			"config": {
 				"server": {
-					"port": 8929
+					"port": 9616
 				}
 			}
 		},
@@ -1219,12 +1171,12 @@
 						"localhost:3000"
 					],
 					"environments": {},
-					"port": "6191"
+					"port": "5181"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 6191
+					"port": 5181
 				}
 			}
 		},
@@ -1256,12 +1208,12 @@
 						"localhost:3001"
 					],
 					"environments": {},
-					"port": "4721"
+					"port": "3988"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 4721
+					"port": 3988
 				}
 			}
 		},
@@ -1298,12 +1250,12 @@
 						"localhost:3003"
 					],
 					"environments": {},
-					"port": "7138"
+					"port": "2582"
 				}
 			],
 			"config": {
 				"server": {
-					"port": 7138
+					"port": 2582
 				}
 			}
 		},
@@ -1385,7 +1337,7 @@
 						"localhost:3007"
 					],
 					"environments": {},
-					"port": "8949"
+					"port": "7786"
 				}
 			],
 			"links": [
@@ -1397,9 +1349,75 @@
 			"path": "app-flowershop-registration_4",
 			"config": {
 				"server": {
-					"port": 8949
+					"port": 7786
 				}
 			}
+		},
+		{
+			"name": "infra-flowershop-mongodb",
+			"imagename": "molinio/workspace",
+			"definition": {
+				"type": "mongodb",
+				"composeFile": "docker-compose.yml",
+				"source": {
+					"type": "git",
+					"url": "https://github.com/jaystack/infra-flowershop-mongodb.git",
+					"repository": "https://github.com/jaystack/infra-flowershop-mongodb.git"
+				}
+			},
+			"links": [
+				{
+					"icon": "fa-github",
+					"link": "https://github.com/jaystack/infra-flowershop-mongodb.git"
+				}
+			],
+			"commandMode": "native",
+			"dependencies": [],
+			"endpoints": [
+				{
+					"aliases": [
+						"localhost:27017"
+					],
+					"environments": {},
+					"port": "27017"
+				}
+			]
+		},
+		{
+			"commandMode": "native",
+			"imagename": "molinio/workspace",
+			"definition": {
+				"source": {
+					"repository": "https://github.com/jaystack/infra-flowershop-rabbitmq.git",
+					"type": "git",
+					"url": "https://github.com/jaystack/infra-flowershop-rabbitmq"
+				},
+				"type": "docker"
+			},
+			"dependencies": [],
+			"name": "infra-flowershop-rabbitmq",
+			"endpoints": [
+				{
+					"aliases": [
+						"localhost:5672"
+					],
+					"environments": {},
+					"port": "5672"
+				},
+				{
+					"aliases": [
+						"localhost:15672"
+					],
+					"environments": {},
+					"port": "15672"
+				}
+			],
+			"links": [
+				{
+					"icon": "fa-github",
+					"link": "https://github.com/jaystack/infra-flowershop-rabbitmq"
+				}
+			]
 		}
 	],
 	"plugins": {
