@@ -1,8 +1,8 @@
 {
-  "name": "final",
-  "description": "final description",
+  "name": "Todo",
+  "description": "It's my Todo application!",
   "workspaceImage": "molinio/workspace:latest",
-  "workspaceNetwork": "final",
+  "workspaceNetwork": "Todo",
   "refreshTime": 60000,
   "onlineWorkspace": {
     "hostAddress": "10.8.0.1",
