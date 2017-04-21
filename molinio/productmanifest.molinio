@@ -8,7 +8,7 @@
     {
       "name": "molinio",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio",
@@ -21,20 +21,12 @@
           "link": "https://github.com/jaystack/molinio"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977342074
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-core",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-core",
@@ -47,20 +39,12 @@
           "link": "https://github.com/jaystack/molinio-core"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977342560
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-basic",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-basic",
@@ -73,20 +57,12 @@
           "link": "https://github.com/jaystack/molinio-basic"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977341661
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-dotnetcore",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-dotnetcore",
@@ -99,20 +75,12 @@
           "link": "https://github.com/jaystack/molinio-dotnetcore"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977340209
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-git",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-git",
@@ -125,20 +93,12 @@
           "link": "https://github.com/jaystack/molinio-git"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977340893
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-npm",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-npm",
@@ -151,20 +111,12 @@
           "link": "https://github.com/jaystack/molinio-npm"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977340024
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-lifecycle",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-lifecycle",
@@ -177,20 +129,12 @@
           "link": "https://github.com/jaystack/molinio-lifecycle"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977342427
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-pt-nodejs",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-pt-nodejs",
@@ -203,20 +147,12 @@
           "link": "https://github.com/jaystack/molinio-pt-nodejs"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977341441
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-pt-docker",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-pt-docker",
@@ -229,46 +165,12 @@
           "link": "https://github.com/jaystack/molinio-pt-docker"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977341909
-        }
-      }
-    },
-	{
-      "name": "molinio-pt-mongodb",
-      "definition": {
-        "type": "npmpackage",
-        "source": {
-          "type": "git",
-          "url": "https://github.com/jaystack/molinio-pt-mongodb",
-          "repository": "https://github.com/jaystack/molinio-pt-mongodb.git"
-        }
-      },
-      "links": [
-        {
-          "icon": "fa-github",
-          "link": "https://github.com/jaystack/molinio-pt-docker"
-        }
-      ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977341909
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-pt-npmpackage",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-pt-npmpackage",
@@ -281,20 +183,12 @@
           "link": "https://github.com/jaystack/molinio-pt-npmpackage"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977342274
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-moduleloader",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-moduleloader",
@@ -307,20 +201,12 @@
           "link": "https://github.com/jaystack/molinio-moduleloader"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977336986
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-docker",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-docker",
@@ -333,20 +219,12 @@
           "link": "https://github.com/jaystack/molinio-docker"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977340360
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-pt-dotnetcore",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-pt-dotnetcore",
@@ -359,20 +237,12 @@
           "link": "https://github.com/jaystack/molinio-pt-dotnetcore"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977339456
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-productloader",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-productloader",
@@ -385,20 +255,12 @@
           "link": "https://github.com/jaystack/molinio-productloader"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977340989
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-react-core",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-react-core",
@@ -411,20 +273,12 @@
           "link": "https://github.com/jaystack/molinio-react-core"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977342714
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-pm2",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-pm2",
@@ -437,20 +291,12 @@
           "link": "https://github.com/jaystack/molinio-pm2"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977339790
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-aws-provisioning",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-aws-provisioning",
@@ -463,20 +309,12 @@
           "link": "https://github.com/jaystack/molinio-aws-provisioning"
         }
       ],
-      "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977339626
-        }
-      }
+      "commandMode": "local"
     },
     {
       "name": "molinio-workspace",
       "definition": {
-        "type": "npmpackage",
+        "type": "nodejs",
         "source": {
           "type": "git",
           "url": "https://github.com/jaystack/molinio-workspace",
@@ -489,15 +327,20 @@
           "link": "https://github.com/jaystack/molinio-workspace"
         }
       ],
+      "commandMode": "local"
+    },
+    {
       "commandMode": "local",
-      "state": {
-        "targetEnvironment": {
-          "env": null,
-          "errored": "Cannot read property 'env' of undefined",
-          "status": "completed",
-          "updated": 1486977340666
-        }
-      }
+      "definition": {
+        "source": {
+          "repository": "https://github.com/jaystack/molinio-pt-mongodb.git",
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-pt-mongodb"
+        },
+        "type": "nodejs"
+      },
+      "dependencies": [],
+      "name": "molinio-pt-mongodb"
     }
   ],
   "plugins": {
