@@ -477,6 +477,20 @@
         "molinio-react-core"
       ],
       "mandatoryDependencies": []
+    },
+    {
+      "name": "molinio-productdefinitions",
+      "commandMode": "local",
+      "definition": {
+        "source": {
+          "repository": "https://github.com/jaystack/molinio-productdefinitions.git",
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-productdefinitions"
+        },
+        "type": "nodejs"
+      },
+      "dependencies": [],
+      "mandatoryDependencies": []
     }
   ],
   "plugins": {
