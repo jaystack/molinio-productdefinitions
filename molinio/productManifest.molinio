@@ -1,0 +1,353 @@
+{
+  "name": "molinio",
+  "description": "Product manifest for our own product.",
+  "workspaceImage": "molinio/workspace:latest",
+  "workspaceNetwork": "molinio",
+  "refreshTime": 60000,
+  "projects": [
+    {
+      "name": "molinio",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio",
+          "repository": "https://github.com/jaystack/molinio.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-core",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-core",
+          "repository": "https://github.com/jaystack/molinio-core.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-core"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-basic",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-basic",
+          "repository": "https://github.com/jaystack/molinio-basic.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-basic"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-dotnetcore",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-dotnetcore",
+          "repository": "https://github.com/jaystack/molinio-dotnetcore.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-dotnetcore"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-git",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-git",
+          "repository": "https://github.com/jaystack/molinio-git.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-git"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-npm",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-npm",
+          "repository": "https://github.com/jaystack/molinio-npm.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-npm"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-lifecycle",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-lifecycle",
+          "repository": "https://github.com/jaystack/molinio-lifecycle.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-lifecycle"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-pt-nodejs",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-pt-nodejs",
+          "repository": "https://github.com/jaystack/molinio-pt-nodejs.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-pt-nodejs"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-pt-docker",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-pt-docker",
+          "repository": "https://github.com/jaystack/molinio-pt-docker.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-pt-docker"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-pt-npmpackage",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-pt-npmpackage",
+          "repository": "https://github.com/jaystack/molinio-pt-npmpackage.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-pt-npmpackage"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-moduleloader",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-moduleloader",
+          "repository": "https://github.com/jaystack/molinio-moduleloader.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-moduleloader"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-docker",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-docker",
+          "repository": "https://github.com/jaystack/molinio-docker.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-docker"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-pt-dotnetcore",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-pt-dotnetcore",
+          "repository": "https://github.com/jaystack/molinio-pt-dotnetcore.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-pt-dotnetcore"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-productloader",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-productloader",
+          "repository": "https://github.com/jaystack/molinio-productloader.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-productloader"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-react-core",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-react-core",
+          "repository": "https://github.com/jaystack/molinio-react-core.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-react-core"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-pm2",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-pm2",
+          "repository": "https://github.com/jaystack/molinio-pm2.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-pm2"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-aws-provisioning",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-aws-provisioning",
+          "repository": "https://github.com/jaystack/molinio-aws-provisioning.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-aws-provisioning"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "name": "molinio-workspace",
+      "definition": {
+        "type": "nodejs",
+        "source": {
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-workspace",
+          "repository": "https://github.com/jaystack/molinio-workspace.git"
+        }
+      },
+      "links": [
+        {
+          "icon": "fa-github",
+          "link": "https://github.com/jaystack/molinio-workspace"
+        }
+      ],
+      "commandMode": "local"
+    },
+    {
+      "commandMode": "local",
+      "definition": {
+        "source": {
+          "repository": "https://github.com/jaystack/molinio-pt-mongodb.git",
+          "type": "git",
+          "url": "https://github.com/jaystack/molinio-pt-mongodb"
+        },
+        "type": "nodejs"
+      },
+      "dependencies": [],
+      "name": "molinio-pt-mongodb"
+    }
+  ],
+  "plugins": {
+    "basic": {
+      "vscode": {
+        "zone": "buttons"
+      }
+    }
+  }
+}
