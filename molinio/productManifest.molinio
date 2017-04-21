@@ -21,7 +21,26 @@
           "link": "https://github.com/jaystack/molinio"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-npm",
+        "molinio-lifecycle",
+        "molinio-git",
+        "molinio-pt-mongodb",
+        "molinio-pm2",
+        "molinio-react-core",
+        "molinio-productloader",
+        "molinio-pt-dotnetcore",
+        "molinio-docker",
+        "molinio-moduleloader",
+        "molinio-pt-npmpackage",
+        "molinio-pt-docker",
+        "molinio-pt-nodejs",
+        "molinio-core",
+        "molinio-basic",
+        "molinio-dotnetcore"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-core",
@@ -39,7 +58,9 @@
           "link": "https://github.com/jaystack/molinio-core"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-basic",
@@ -57,7 +78,16 @@
           "link": "https://github.com/jaystack/molinio-basic"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-git",
+        "molinio-lifecycle",
+        "molinio-npm",
+        "molinio-moduleloader",
+        "molinio-productloader"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-dotnetcore",
@@ -75,7 +105,13 @@
           "link": "https://github.com/jaystack/molinio-dotnetcore"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-lifecycle",
+        "molinio-pm2"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-git",
@@ -93,7 +129,13 @@
           "link": "https://github.com/jaystack/molinio-git"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-lifecycle",
+        "molinio-productloader"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-npm",
@@ -111,7 +153,14 @@
           "link": "https://github.com/jaystack/molinio-npm"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-lifecycle",
+        "molinio-productloader",
+        "molinio-pm2"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-lifecycle",
@@ -129,7 +178,11 @@
           "link": "https://github.com/jaystack/molinio-lifecycle"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-pt-nodejs",
@@ -147,7 +200,17 @@
           "link": "https://github.com/jaystack/molinio-pt-nodejs"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-docker",
+        "molinio-git",
+        "molinio-lifecycle",
+        "molinio-npm",
+        "molinio-productloader",
+        "molinio-react-core"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-pt-docker",
@@ -165,7 +228,16 @@
           "link": "https://github.com/jaystack/molinio-pt-docker"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-docker",
+        "molinio-git",
+        "molinio-lifecycle",
+        "molinio-productloader",
+        "molinio-react-core"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-pt-npmpackage",
@@ -183,7 +255,16 @@
           "link": "https://github.com/jaystack/molinio-pt-npmpackage"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-lifecycle",
+        "molinio-git",
+        "molinio-react-core",
+        "molinio-productloader",
+        "molinio-npm"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-moduleloader",
@@ -201,7 +282,12 @@
           "link": "https://github.com/jaystack/molinio-moduleloader"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-lifecycle"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-docker",
@@ -219,7 +305,15 @@
           "link": "https://github.com/jaystack/molinio-docker"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-basic",
+        "molinio-core",
+        "molinio-git",
+        "molinio-lifecycle",
+        "molinio-productloader"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-pt-dotnetcore",
@@ -237,7 +331,17 @@
           "link": "https://github.com/jaystack/molinio-pt-dotnetcore"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-docker",
+        "molinio-git",
+        "molinio-lifecycle",
+        "molinio-productloader",
+        "molinio-react-core",
+        "molinio-dotnetcore"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-productloader",
@@ -255,7 +359,13 @@
           "link": "https://github.com/jaystack/molinio-productloader"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-lifecycle",
+        "molinio-moduleloader"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-react-core",
@@ -273,7 +383,16 @@
           "link": "https://github.com/jaystack/molinio-react-core"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-basic",
+        "molinio-core",
+        "molinio-git",
+        "molinio-lifecycle",
+        "molinio-pm2",
+        "molinio-productloader"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-pm2",
@@ -291,7 +410,13 @@
           "link": "https://github.com/jaystack/molinio-pm2"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [
+        "molinio-core",
+        "molinio-lifecycle",
+        "molinio-productloader"
+      ],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-aws-provisioning",
@@ -309,7 +434,9 @@
           "link": "https://github.com/jaystack/molinio-aws-provisioning"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [],
+      "mandatoryDependencies": []
     },
     {
       "name": "molinio-workspace",
@@ -327,9 +454,12 @@
           "link": "https://github.com/jaystack/molinio-workspace"
         }
       ],
-      "commandMode": "local"
+      "commandMode": "local",
+      "dependencies": [],
+      "mandatoryDependencies": []
     },
     {
+      "name": "molinio-pt-mongodb",
       "commandMode": "local",
       "definition": {
         "source": {
@@ -339,8 +469,14 @@
         },
         "type": "nodejs"
       },
-      "dependencies": [],
-      "name": "molinio-pt-mongodb"
+      "dependencies": [
+        "molinio-core",
+        "molinio-docker",
+        "molinio-productloader",
+        "molinio-pt-docker",
+        "molinio-react-core"
+      ],
+      "mandatoryDependencies": []
     }
   ],
   "plugins": {
